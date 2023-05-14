@@ -1,0 +1,66 @@
+docker run -p 9091:9091 -e DS_LICENSE=accept --name datastax --link cassandra -d datastax/dse-studio
+
+docker run -p 9042:9042 -e DS_LICENSE=accept --name cassandra -d datastax/dse-server:5.1.37-1 -g -s -k
+
+
+
+
+
+************COMANDOS UTILES******************
+
+docker exec -it cassandra bash  # ENTRAR AL DOCKER 
+pwd                             # PARARSE EN UN LUGAR DEL DOCKER
+
+cqlsh                           # INGRESO AL CQLSH
+
+desc keyspaces;                 # VER LOS KEYSPACES
+
+CREATE KEYSPACE nombreNuevo WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };  # CREA EL KEYSPACES
+
+use key_books;                  # ELEGIR EL KEYSPACE BOOK
+desc tables			# VER LAS TABLAS
+
+
+
+
+
+create table books_data (id int PRIMARY KEY, 
+Title varchar, 
+authors varchar, 
+images varchar, 
+previewLink varchar, 
+publishedDate varchar, 
+infoLink varchar, 
+categories varchar, 
+description varchar, 
+publisher varchar, 
+ratingsCount varchar);
+   
+   
+   select * from books_data;
+   
+   
+COPY books_data (id, 
+Title, 
+authors, 
+images, 
+previewLink, 
+publishedDate, 
+infoLink, 
+categories, 
+description, 
+publisher, 
+ratingsCount) FROM '/lib/romano/books_data.csv' WITH DELIMITER=',' AND HEADER=TRUE;
+
+
+select id, 
+Title, 
+authors, 
+images, 
+previewLink, 
+publishedDate, 
+infoLink, 
+categories, 
+description, 
+publisher, 
+ratingsCount FROM books_data;

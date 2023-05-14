@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  studio:  # Datastax Studio provides convenient web interface to work directly with the Apache Cassandra or DataStax Enterprise
+    image: datastax/dse-studio:latest
+    container_name: datastax
+    #volumes:
+    #  - ./studio_data:/var/lib/datastax-studio
+    #  - ./studio_config.yaml:/opt/datastax-studio/conf/configuration.yaml
+    ports:
+      - 9091:9091 # Exposes port to be available externally
+    depends_on:
+      - cassandra # Needs DSE to be running
+    environment:
+      DS_LICENSE: accept    
+
+  cassandra:
+    image: datastax/dse-server:5.1.37-1
+    container_name: cassandra
+    volumes:
+      - ./data:/lib/romano
+    ports:
+      - 9042:9042
+    environment:
+      DS_LICENSE: accept

@@ -1,0 +1,20 @@
+version: '3.8'
+
+networks:
+  my_network:
+    name: my_network
+
+services:
+  db-mongo:
+    container_name: mongo4
+    hostname: mongo4
+    image: mongo:4.4.18
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=j
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./mongo_data:/data/db
+    networks:
+      - my_network
