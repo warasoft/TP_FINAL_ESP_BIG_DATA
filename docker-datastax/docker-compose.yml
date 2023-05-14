@@ -1,0 +1,16 @@
+version: '3.8'
+
+networks:
+  my_network2:
+    name: my_network2
+
+services:
+  studio:
+    container_name: datastax
+    image: datastax/dse-studio
+    environment:
+      - DS_LICENSE=accept
+    ports:
+      - 9091:9091
+    networks:
+      - my_network2

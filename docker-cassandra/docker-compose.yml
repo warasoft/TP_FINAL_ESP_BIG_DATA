@@ -1,0 +1,17 @@
+version: '3.8'
+
+networks:
+  my_network2:
+    name: my_network2
+
+services:
+  cassandra:
+    container_name: cassandra
+    hostname: cassandra
+    image: cassandra:4.1.1
+    ports:
+      - '9042:9042'
+    volumes:
+      - ./cassandra_data:/home
+    networks:
+      - my_network2
