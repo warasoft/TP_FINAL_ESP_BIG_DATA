@@ -1,0 +1,53 @@
+SITIO CON LOS COMANDOS COMPLETOS DE DOCKER
+
+https://www.kaggle.com/datasets/sarthakkapaliya/amazon-product-length-prediction-dataset  # dataset para usar
+
+
+https://docs.docker.com/engine/reference/run/
+
+
+https://geekflare.com/es/docker-manage-containers/
+
+
+https://github.com/Guille2000
+****************************************************************************************************************************************************
+
+$ docker ps //ver contenedores en ejecucion
+$ docker ps -a //ver conte en ejec y no ejec
+
+
+
+
+$ docker-compose up -d  //LEVANTAR UN DOCKER-COMPOSE.YML, CON -d LEVANTA EN SEGUNDO PLANO
+
+$ docker network ls    //VER LAS REDES
+
+$ docker ps --format \   //VER CONTENEDORES CON UN FORMATO PREESTABLECIDO, PRIMERO SE EJECUTA HASTA EL FORMAT, DESPUES LOS PARAMETROS
+"table {{.ID}}\t{{.Status}}\t{{.Names}}"
+
+
+
+******************************* REDES **************************************************************************************************************
+
+$ docker network rm my-network   //ELIMINAR UNA RED 
+
+$ docker network rm NETWORK [NETWORK...]  //UNA O VARIAS REDES UNA SEGUIDA DE LA OTRA
+
+
+*********************************CONTENEDOR******************************************************************************************************
+
+$ docker-compose exec cassandra /bin/bash    //ENTRAR AL CONTENEDOR
+
+
+
+$ cqlsh //ENTRAR EN BD CASSANDRA
+
+**************************************************************************************************************************************************
+
+
+7000	Se utiliza para la comunicación del clúster entre nodos.
+7001	Se utiliza para la comunicación de clúster entre nodos SSL.
+7199	Se utiliza para la supervisión JMX del nodo Cassandra.
+9042	Puerto de cliente que solía conectarse a Cassandra y realizar operaciones.
+9160	Puerto de cliente Cassandra Thrift.
+
