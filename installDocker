@@ -1,6 +1,13 @@
+##COMO INSTALAR DOCKER
 https://diarioprogramador.com/como-instalar-docker-en-ubuntu-server-20-04-22-04/
 
-https://materiageek.com/como-instalar-mongodb-compass-en-ubuntu/   **instalar mongocompass
+
+##INSTALACION DE MONGODBCOMPASS
+https://materiageek.com/como-instalar-mongodb-compass-en-ubuntu/
+
+##STRING DE CONEXION
+mongodb://root:j@localhost:27017/?authSource=admin
 
 
+##DATOS
 https://www.kaggle.com/datasets/sennikovandrey/data-netflix-prize?select=df_train_als.csv
