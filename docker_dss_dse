@@ -1,11 +1,3 @@
-docker run -p 9091:9091 -e DS_LICENSE=accept --name datastax --link cassandra -d datastax/dse-studio
-
-docker run -p 9042:9042 -e DS_LICENSE=accept --name cassandra -d datastax/dse-server:5.1.37-1 -g -s -k
-
-
-
-
-
 ************COMANDOS UTILES******************
 
 # ENTRAR AL DOCKER 
@@ -21,7 +13,7 @@ cqlsH
 
 
 ## CREA EL KEYSPACES
-CREATE KEYSPACE nombreNuevo WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+CREATE KEYSPACE ycsb WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
 
 
 # VER LOS KEYSPACES
