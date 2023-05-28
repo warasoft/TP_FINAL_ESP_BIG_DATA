@@ -1,6 +1,4 @@
 LOAD
-
-
 ##MONGO
 ./bin/ycsb load mongodb -s -P workloads/workloada -p mongodb.url=mongodb://root:j@localhost:27017/admin -p recordcount=2000 -threads 2
 
