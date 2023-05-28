@@ -1,15 +1,19 @@
 LOAD
 
-./bin/ycsb load mongodb -s -P workloads/workloada -p recordcount=500000 -threads 4 -p mongodb.url=mongodb://root:j@localhost:27017/admin
-###./bin/ycsb load mongodb -s -P workloads/workloada -p mongodb.url=mongodb://root:j@localhost:27017/admin
-###./bin/ycsb load mongodb -s -P workloads/workloada -p mongodb.url=mongodb://localhost:27017/ycsb?w=0
+
+##MONGO
+./bin/ycsb load mongodb -s -P workloads/workloada -p mongodb.url=mongodb://root:j@localhost:27017/admin -p recordcount=2000 -threads 2
+
+##CASSANDRA
+./bin/ycsb load cassandra-cql -s -P workloads/workloada -p hosts=172.19.0.2 -p recordcount=2000 -threads 2
 
 
 RUN
-./bin/ycsb run mongodb -s -P workloads/workloada -p mongodb.url=mongodb://root:j@localhost:27017/admin -p operationcount=500000 -threads 2
-###./bin/ycsb run mongodb -s -P workloads/workloada -p mongodb.url=mongodb://root:j@localhost:27017/admin
+##MONGO
+./bin/ycsb run mongodb -s -P workloads/workloada -p mongodb.url=mongodb://root:j@localhost:27017/admin -p operationcount=2000 -threads 2
 
-
+##CASSANDRA
+./bin/ycsb load cassandra-cql -s -P workloads/workloada -p hosts=172.19.0.2 -p recordcount=2000 -threads 2
 
 
 
