@@ -1,4 +1,6 @@
-INGRESO A CARPETA DE YCSB
+INSTALACION  DE YCSB
+curl -O --location https://github.com/brianfrankcooper/YCSB/releases/download/0.17.0/ycsb-0.17.0.tar.gz
+tar xfvz ycsb-0.17.0.tar.gz
 cd ycsb-0.17.0
 
 
@@ -31,3 +33,82 @@ field6 varchar,
 field7 varchar,
 field8 varchar,
 field9 varchar);
+
+
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2023-05-27 21:51:15:067 4 sec: 1000 operations; 202,06 current ops/sec; [READ: Count=527, Max=90943, Min=955, Avg=3963,41, 90=7159, 99=15687, 99.9=19327, 99.99=90943] [CLEANUP: Count=2, Max=2224127, Min=5, Avg=1111554,5, 90=2224127, 99=2224127, 99.9=2224127, 99.99=2224127] [UPDATE: Count=473, Max=81215, Min=988, Avg=3706,57, 90=7843, 99=15719, 99.9=81215, 99.99=81215] 
+[OVERALL], RunTime(ms), 4949
+[OVERALL], Throughput(ops/sec), 202.0610224287735
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 12
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.2424732269145282
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 12
+[TOTAL_GC_TIME_%], Time(%), 0.2424732269145282
+[READ], Operations, 527
+[READ], AverageLatency(us), 3963.4098671726756
+[READ], MinLatency(us), 955
+[READ], MaxLatency(us), 90943
+[READ], 95thPercentileLatency(us), 9807
+[READ], 99thPercentileLatency(us), 15687
+[READ], Return=OK, 527
+[CLEANUP], Operations, 2
+[CLEANUP], AverageLatency(us), 1111554.5
+[CLEANUP], MinLatency(us), 5
+[CLEANUP], MaxLatency(us), 2224127
+[CLEANUP], 95thPercentileLatency(us), 2224127
+[CLEANUP], 99thPercentileLatency(us), 2224127
+[UPDATE], Operations, 473
+[UPDATE], AverageLatency(us), 3706.5729386892176
+[UPDATE], MinLatency(us), 988
+[UPDATE], MaxLatency(us), 81215
+[UPDATE], 95thPercentileLatency(us), 10639
+[UPDATE], 99thPercentileLatency(us), 15719
+[UPDATE], Return=OK, 473
+
+
+
+
+
+Starting test.
+2023-05-27 21:50:57:120 0 sec: 0 operations; est completion in 0 second 
+mongo client connection created with mongodb://root:j@localhost:27017/admin
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2023-05-27 21:50:58:589 1 sec: 1000 operations; 649,77 current ops/sec; [READ: Count=509, Max=248703, Min=256, Avg=2119,44, 90=2827, 99=8647, 99.9=25167, 99.99=248703] [CLEANUP: Count=2, Max=4303, Min=4, Avg=2153, 90=4303, 99=4303, 99.9=4303, 99.99=4303] [UPDATE: Count=491, Max=206719, Min=249, Avg=1815,88, 90=2361, 99=6619, 99.9=206719, 99.99=206719] 
+[OVERALL], RunTime(ms), 1554
+[OVERALL], Throughput(ops/sec), 643.5006435006435
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 27
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 1.7374517374517375
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 27
+[TOTAL_GC_TIME_%], Time(%), 1.7374517374517375
+[READ], Operations, 509
+[READ], AverageLatency(us), 2119.4440078585462
+[READ], MinLatency(us), 256
+[READ], MaxLatency(us), 248703
+[READ], 95thPercentileLatency(us), 3447
+[READ], 99thPercentileLatency(us), 8647
+[READ], Return=OK, 509
+[CLEANUP], Operations, 2
+[CLEANUP], AverageLatency(us), 2153.0
+[CLEANUP], MinLatency(us), 4
+[CLEANUP], MaxLatency(us), 4303
+[CLEANUP], 95thPercentileLatency(us), 4303
+[CLEANUP], 99thPercentileLatency(us), 4303
+[UPDATE], Operations, 491
+[UPDATE], AverageLatency(us), 1815.8757637474541
+[UPDATE], MinLatency(us), 249
+[UPDATE], MaxLatency(us), 206719
+[UPDATE], 95thPercentileLatency(us), 3123
+[UPDATE], 99thPercentileLatency(us), 6619
+[UPDATE], Return=OK, 491
+
+
