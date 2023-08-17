@@ -51,3 +51,4 @@ $ cqlsh //ENTRAR EN BD CASSANDRA
 9042	Puerto de cliente que solía conectarse a Cassandra y realizar operaciones.
 9160	Puerto de cliente Cassandra Thrift.
 
+https://db-engines.com/en/ranking   // datos comparativos de sitio web
