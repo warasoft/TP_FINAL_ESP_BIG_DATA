@@ -33,6 +33,10 @@ $ docker network rm my-network   //ELIMINAR UNA RED
 
 $ docker network rm NETWORK [NETWORK...]  //UNA O VARIAS REDES UNA SEGUIDA DE LA OTRA
 
+##ver la ip de un contenedor
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' nombre_del_contenedor
+
+
 
 *********************************CONTENEDOR******************************************************************************************************
 
