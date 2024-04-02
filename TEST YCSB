@@ -1,6 +1,8 @@
-INSTALACION  DE YCSB
+##INSTALACION  DE YCSB
 curl -O --location https://github.com/brianfrankcooper/YCSB/releases/download/0.17.0/ycsb-0.17.0.tar.gz
 tar xfvz ycsb-0.17.0.tar.gz
+
+##PARA CORRER YCSB HAY QUE ENTRAR EN LA CARPETA YCSB
 cd ycsb-0.17.0
 
 
@@ -9,7 +11,8 @@ LOAD
 ./bin/ycsb load mongodb -s -P workloads/workloada -p mongodb.url=mongodb://root:j@localhost:27017/admin -p recordcount=2000 -threads 2
 
 ##CASSANDRA
-./bin/ycsb load cassandra-cql -s -P workloads/workloada -p hosts=172.19.0.2 -p recordcount=2000 -threads 2
+## ATENCION, HAY QUE VER QUE IP TIENE EL CONTENEDOR Y PONERLE LA IP NUEVA EN EL HOST
+./bin/ycsb load cassandra-cql -s -P workloads/workloada -p hosts=172.19.0.3 -p recordcount=2000 -threads 2
 
 
 RUN
@@ -17,10 +20,32 @@ RUN
 ./bin/ycsb run mongodb -s -P workloads/workloada -p mongodb.url=mongodb://root:j@localhost:27017/admin -p operationcount=2000 -threads 2
 
 ##CASSANDRA
-./bin/ycsb load cassandra-cql -s -P workloads/workloada -p hosts=172.19.0.2 -p recordcount=2000 -threads 2
+## ATENCION, HAY QUE VER QUE IP TIENE EL CONTENEDOR Y PONERLE LA IP NUEVA EN EL HOST
+./bin/ycsb load cassandra-cql -s -P workloads/workloada -p hosts=172.19.0.3 -p recordcount=2000 -threads 2
 
 
 
+
+##PARA TRABAJAR EN CASSANDRA HAY QUE HACER UNOS PASOS, MAS QUE MONGO, HAY QUE ENTRAR A CASSANDRA DEL CONTENEDOR Y CREAR LA TABLA
+##ENTRAR AL DOCKER 
+docker exec -it cassandra bash
+
+## INGRESO AL CQLSH
+cqlsH
+
+## VER LOS KEYSPACES
+desc keyspaces;
+
+## CREA EL KEYSPACES SI ES QUE NO TENGO
+CREATE KEYSPACE ycsb WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+
+## SELECCIONAR EL KEYSPACE
+use ycsb;                  
+
+## VER LAS TABLAS
+desc tables
+
+## CREAR UNA TABLA SI ES QUE NO TENGO
 CREATE TABLE usertable (
 y_id varchar primary key,
 field0 varchar,
