@@ -1,0 +1,88 @@
+MONGODB WL C 100K RUN
+
+Loading workload...
+Starting test.
+2024-04-07 00:01:46:318 0 sec: 0 operations; est completion in 0 second 
+mongo client connection created with mongodb://root:j@localhost:27017/admin
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2024-04-07 00:01:56:201 10 sec: 6073 operations; 606,94 current ops/sec; est completion in 2 minutes [READ: Count=6073, Max=819711, Min=288, Avg=2870,02, 90=5095, 99=20879, 99.9=43935, 99.99=712703] 
+2024-04-07 00:02:06:413 20 sec: 19746 operations; 1340,49 current ops/sec; est completion in 1 minute [READ: Count=13673, Max=378623, Min=214, Avg=1479,18, 90=2669, 99=9391, 99.9=41215, 99.99=375295] 
+2024-04-07 00:02:16:196 30 sec: 30512 operations; 1099,24 current ops/sec; est completion in 1 minute [READ: Count=10766, Max=66623, Min=205, Avg=1803,24, 90=3155, 99=8071, 99.9=25327, 99.99=35871] 
+2024-04-07 00:02:26:196 40 sec: 42740 operations; 1222,8 current ops/sec; est completion in 54 seconds [READ: Count=12228, Max=76735, Min=240, Avg=1629,42, 90=2851, 99=6875, 99.9=29647, 99.99=74495] 
+2024-04-07 00:02:36:196 50 sec: 54421 operations; 1168,1 current ops/sec; est completion in 42 seconds [READ: Count=11682, Max=76479, Min=214, Avg=1701,79, 90=3057, 99=7523, 99.9=26415, 99.99=51423] 
+2024-04-07 00:02:46:196 60 sec: 66387 operations; 1196,48 current ops/sec; est completion in 31 seconds [READ: Count=11965, Max=53535, Min=239, Avg=1663,7, 90=2941, 99=6079, 99.9=17263, 99.99=52639] 
+2024-04-07 00:02:56:196 70 sec: 75728 operations; 934,19 current ops/sec; est completion in 23 seconds [READ: Count=9341, Max=898047, Min=206, Avg=2135,69, 90=3201, 99=8967, 99.9=33247, 99.99=896511] 
+2024-04-07 00:03:06:197 80 sec: 88913 operations; 1318,37 current ops/sec; est completion in 10 seconds [READ: Count=13185, Max=51999, Min=206, Avg=1512,23, 90=2965, 99=11295, 99.9=32719, 99.99=47327] 
+2024-04-07 00:03:15:055 88 sec: 100000 operations; 1251,64 current ops/sec; [READ: Count=11087, Max=71487, Min=178, Avg=1490,95, 90=2817, 99=7367, 99.9=27231, 99.99=51455] [CLEANUP: Count=2, Max=2733, Min=18, Avg=1375,5, 90=2733, 99=2733, 99.9=2733, 99.99=2733] 
+[OVERALL], RunTime(ms), 88859
+[OVERALL], Throughput(ops/sec), 1125.3784084898548
+[TOTAL_GCS_PS_Scavenge], Count, 78
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 367
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.41301387591577665
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 78
+[TOTAL_GC_TIME], Time(ms), 367
+[TOTAL_GC_TIME_%], Time(%), 0.41301387591577665
+[READ], Operations, 100000
+[READ], AverageLatency(us), 1731.97541
+[READ], MinLatency(us), 178
+[READ], MaxLatency(us), 898047
+[READ], 95thPercentileLatency(us), 4035
+[READ], 99thPercentileLatency(us), 9239
+[READ], Return=OK, 100000
+[CLEANUP], Operations, 2
+[CLEANUP], AverageLatency(us), 1375.5
+[CLEANUP], MinLatency(us), 18
+[CLEANUP], MaxLatency(us), 2733
+[CLEANUP], 95thPercentileLatency(us), 2733
+[CLEANUP], 99thPercentileLatency(us), 2733
+
+
+#######################################
+CASSANDRADB WL C 100K RUN
+
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-04-07 00:05:36:194 0 sec: 0 operations; est completion in 0 second 
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+2024-04-07 00:05:46:134 10 sec: 6546 operations; 654,53 current ops/sec; est completion in 2 minutes [READ: Count=6549, Max=577535, Min=584, Avg=2547,81, 90=3713, 99=13055, 99.9=31695, 99.99=575999] 
+2024-04-07 00:05:56:137 20 sec: 17310 operations; 1075,86 current ops/sec; est completion in 1 minute [READ: Count=10761, Max=144511, Min=362, Avg=1842,3, 90=2557, 99=9423, 99.9=31791, 99.99=143615] 
+2024-04-07 00:06:06:132 30 sec: 28780 operations; 1147,57 current ops/sec; est completion in 1 minute [READ: Count=11470, Max=41119, Min=542, Avg=1737,23, 90=2361, 99=6427, 99.9=27359, 99.99=41023] 
+2024-04-07 00:06:16:132 40 sec: 41567 operations; 1278,7 current ops/sec; est completion in 57 seconds [READ: Count=12787, Max=274431, Min=418, Avg=1556,21, 90=2147, 99=6675, 99.9=28815, 99.99=273151] 
+2024-04-07 00:06:26:132 50 sec: 56327 operations; 1476 current ops/sec; est completion in 39 seconds [READ: Count=14760, Max=56351, Min=553, Avg=1349,36, 90=1700, 99=5587, 99.9=20495, 99.99=56223] 
+2024-04-07 00:06:36:132 60 sec: 70933 operations; 1460,6 current ops/sec; est completion in 25 seconds [READ: Count=14606, Max=38975, Min=579, Avg=1362,92, 90=1791, 99=3205, 99.9=12551, 99.99=38655] 
+2024-04-07 00:06:46:132 70 sec: 83369 operations; 1243,6 current ops/sec; est completion in 14 seconds [READ: Count=12436, Max=67647, Min=503, Avg=1603,42, 90=2257, 99=5383, 99.9=29183, 99.99=67391] 
+2024-04-07 00:06:56:132 80 sec: 95160 operations; 1179,1 current ops/sec; est completion in 5 second [READ: Count=11791, Max=1009151, Min=360, Avg=1692,96, 90=1997, 99=7263, 99.9=26863, 99.99=1004543] 
+2024-04-07 00:07:02:429 86 sec: 100000 operations; 768,62 current ops/sec; [READ: Count=4840, Max=25967, Min=596, Avg=1504,97, 90=1861, 99=6967, 99.9=21279, 99.99=25967] [CLEANUP: Count=2, Max=2260991, Min=20, Avg=1129994, 90=2260991, 99=2260991, 99.9=2260991, 99.99=2260991] 
+[OVERALL], RunTime(ms), 86310
+[OVERALL], Throughput(ops/sec), 1158.6142973004287
+[TOTAL_GCS_PS_Scavenge], Count, 36
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 179
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.20739195921677675
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 36
+[TOTAL_GC_TIME], Time(ms), 179
+[TOTAL_GC_TIME_%], Time(%), 0.20739195921677675
+[READ], Operations, 100000
+[READ], AverageLatency(us), 1633.45178
+[READ], MinLatency(us), 360
+[READ], MaxLatency(us), 1009151
+[READ], 95thPercentileLatency(us), 2923
+[READ], 99thPercentileLatency(us), 6819
+[READ], Return=OK, 100000
+[CLEANUP], Operations, 2
+[CLEANUP], AverageLatency(us), 1129994.0
+[CLEANUP], MinLatency(us), 20
+[CLEANUP], MaxLatency(us), 2260991
+[CLEANUP], 95thPercentileLatency(us), 2260991
+[CLEANUP], 99thPercentileLatency(us), 2260991
+

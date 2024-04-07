@@ -1,0 +1,73 @@
+mongodb WB 300K RUN
+
+
+2024-04-07 03:42:43:489 334 sec: 300000 operations; 1295,38 current ops/sec; [READ: Count=5365, Max=58111, Min=242, Avg=756,73, 90=1387, 99=4099, 99.9=17663, 99.99=41151] [CLEANUP: Count=1, Max=19999, Min=19984, Avg=19992, 90=19999, 99=19999, 99.9=19999, 99.99=19999] [UPDATE: Count=301, Max=7927, Min=293, Avg=841,72, 90=1444, 99=4023, 99.9=7927, 99.99=7927] 
+[OVERALL], RunTime(ms), 334388
+[OVERALL], Throughput(ops/sec), 897.1613813892843
+[TOTAL_GCS_PS_Scavenge], Count, 232
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1565
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.46801918729140995
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 232
+[TOTAL_GC_TIME], Time(ms), 1565
+[TOTAL_GC_TIME_%], Time(%), 0.46801918729140995
+[READ], Operations, 284993
+[READ], AverageLatency(us), 2165.967669381353
+[READ], MinLatency(us), 171
+[READ], MaxLatency(us), 754175
+[READ], 95thPercentileLatency(us), 5995
+[READ], 99thPercentileLatency(us), 16783
+[READ], Return=OK, 284993
+[CLEANUP], Operations, 2
+[CLEANUP], AverageLatency(us), 10005.0
+[CLEANUP], MinLatency(us), 18
+[CLEANUP], MaxLatency(us), 19999
+[CLEANUP], 95thPercentileLatency(us), 19999
+[CLEANUP], 99thPercentileLatency(us), 19999
+[UPDATE], Operations, 15007
+[UPDATE], AverageLatency(us), 2513.910041980409
+[UPDATE], MinLatency(us), 255
+[UPDATE], MaxLatency(us), 700415
+[UPDATE], 95thPercentileLatency(us), 6655
+[UPDATE], 99thPercentileLatency(us), 17791
+[UPDATE], Return=OK, 15007
+
+
+##########################################################
+CASSANDRA WB 300K RUN
+
+vg=2233344, 90=2234367, 99=2234367, 99.9=2234367, 99.99=2234367] [UPDATE: Count=0, Max=0, Min=9223372036854775807, Avg=�, 90=0, 99=0, 99.9=0, 99.99=0] 
+[OVERALL], RunTime(ms), 24183391
+[OVERALL], Throughput(ops/sec), 12.40520818606456
+[TOTAL_GCS_PS_Scavenge], Count, 79
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 325
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.0013438975534903273
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 79
+[TOTAL_GC_TIME], Time(ms), 325
+[TOTAL_GC_TIME_%], Time(%), 0.0013438975534903273
+[READ], Operations, 285101
+[READ], AverageLatency(us), 1302.3463684799422
+[READ], MinLatency(us), 312
+[READ], MaxLatency(us), 529407
+[READ], 95thPercentileLatency(us), 2455
+[READ], 99thPercentileLatency(us), 5907
+[READ], Return=OK, 285101
+[CLEANUP], Operations, 2
+[CLEANUP], AverageLatency(us), 1116676.5
+[CLEANUP], MinLatency(us), 9
+[CLEANUP], MaxLatency(us), 2234367
+[CLEANUP], 95thPercentileLatency(us), 2234367
+[CLEANUP], 99thPercentileLatency(us), 2234367
+[UPDATE], Operations, 14899
+[UPDATE], AverageLatency(us), 1338.1968588495872
+[UPDATE], MinLatency(us), 357
+[UPDATE], MaxLatency(us), 241919
+[UPDATE], 95thPercentileLatency(us), 2411
+[UPDATE], 99thPercentileLatency(us), 6763
+[UPDATE], Return=OK, 14899
+

@@ -1,0 +1,78 @@
+MONGO DB WLD 200K RUN
+
+2024-04-07 03:03:00:406 429 sec: 200000 operations; 379,28 current ops/sec; [READ: Count=3252, Max=74559, Min=240, Avg=2750,57, 90=5715, 99=30143, 99.9=48703, 99.99=74559] [CLEANUP: Count=2, Max=52735, Min=12, Avg=26366, 90=52735, 99=52735, 99.9=52735, 99.99=52735] [INSERT: Count=0, Max=0, Min=9223372036854775807, Avg=�, 90=0, 99=0, 99.9=0, 99.99=0] [INSERT-FAILED: Count=174, Max=56863, Min=539, Avg=4626,6, 90=8175, 99=33919, 99.9=56863, 99.99=56863] 
+[OVERALL], RunTime(ms), 429034
+[OVERALL], Throughput(ops/sec), 466.1635208398402
+[TOTAL_GCS_PS_Scavenge], Count, 228
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 2077
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.484110816392174
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 228
+[TOTAL_GC_TIME], Time(ms), 2077
+[TOTAL_GC_TIME_%], Time(%), 0.484110816392174
+[READ], Operations, 190040
+[READ], AverageLatency(us), 4015.9435276783834
+[READ], MinLatency(us), 168
+[READ], MaxLatency(us), 1419263
+[READ], 95thPercentileLatency(us), 15855
+[READ], 99thPercentileLatency(us), 40863
+[READ], Return=OK, 190040
+[CLEANUP], Operations, 2
+[CLEANUP], AverageLatency(us), 26366.0
+[CLEANUP], MinLatency(us), 12
+[CLEANUP], MaxLatency(us), 52735
+[CLEANUP], 95thPercentileLatency(us), 52735
+[CLEANUP], 99thPercentileLatency(us), 52735
+[INSERT], Operations, 0
+[INSERT], AverageLatency(us), NaN
+[INSERT], MinLatency(us), 9223372036854775807
+[INSERT], MaxLatency(us), 0
+[INSERT], 95thPercentileLatency(us), 0
+[INSERT], 99thPercentileLatency(us), 0
+[INSERT], Return=ERROR, 9960
+[INSERT-FAILED], Operations, 9960
+[INSERT-FAILED], AverageLatency(us), 7786.683935742972
+[INSERT-FAILED], MinLatency(us), 398
+[INSERT-FAILED], MaxLatency(us), 403967
+[INSERT-FAILED], 95thPercentileLatency(us), 30431
+[INSERT-FAILED], 99thPercentileLatency(us), 62207
+
+
+#######################################################################
+
+CASSANDRA DB WLD 200K RUN
+Min=21, Avg=1129994,5, 90=2260991, 99=2260991, 99.9=2260991, 99.99=2260991] [INSERT: Count=20, Max=3187, Min=1371, Avg=1897,7, 90=2305, 99=3187, 99.9=3187, 99.99=3187] 
+[OVERALL], RunTime(ms), 213253
+[OVERALL], Throughput(ops/sec), 937.853160330687
+[TOTAL_GCS_PS_Scavenge], Count, 77
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 510
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.23915255588432519
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 77
+[TOTAL_GC_TIME], Time(ms), 510
+[TOTAL_GC_TIME_%], Time(%), 0.23915255588432519
+[READ], Operations, 189996
+[READ], AverageLatency(us), 2066.3370544643044
+[READ], MinLatency(us), 404
+[READ], MaxLatency(us), 772095
+[READ], 95thPercentileLatency(us), 3973
+[READ], 99thPercentileLatency(us), 10839
+[READ], Return=OK, 189996
+[CLEANUP], Operations, 2
+[CLEANUP], AverageLatency(us), 1129994.5
+[CLEANUP], MinLatency(us), 21
+[CLEANUP], MaxLatency(us), 2260991
+[CLEANUP], 95thPercentileLatency(us), 2260991
+[CLEANUP], 99thPercentileLatency(us), 2260991
+[INSERT], Operations, 10004
+[INSERT], AverageLatency(us), 2173.484706117553
+[INSERT], MinLatency(us), 565
+[INSERT], MaxLatency(us), 403199
+[INSERT], 95thPercentileLatency(us), 4069
+[INSERT], 99thPercentileLatency(us), 11367
+[INSERT], Return=OK, 10004
+

@@ -1,0 +1,59 @@
+MONGODB WC 200K RUN
+
+2024-04-07 02:03:32:395 147 sec: 200000 operations; 1286,47 current ops/sec; [READ: Count=9754, Max=56159, Min=229, Avg=1443,5, 90=2771, 99=7991, 99.9=27071, 99.99=55679] [CLEANUP: Count=2, Max=64031, Min=9, Avg=32012,5, 90=64031, 99=64031, 99.9=64031, 99.99=64031] 
+[OVERALL], RunTime(ms), 147611
+[OVERALL], Throughput(ops/sec), 1354.9125742661454
+[TOTAL_GCS_PS_Scavenge], Count, 19
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 595
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.4030864908441783
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 19
+[TOTAL_GC_TIME], Time(ms), 595
+[TOTAL_GC_TIME_%], Time(%), 0.4030864908441783
+[READ], Operations, 200000
+[READ], AverageLatency(us), 1425.123315
+[READ], MinLatency(us), 139
+[READ], MaxLatency(us), 1367039
+[READ], 95thPercentileLatency(us), 3711
+[READ], 99thPercentileLatency(us), 8559
+[READ], Return=OK, 200000
+[CLEANUP], Operations, 2
+[CLEANUP], AverageLatency(us), 32012.5
+[CLEANUP], MinLatency(us), 9
+[CLEANUP], MaxLatency(us), 64031
+[CLEANUP], 95thPercentileLatency(us), 64031
+[CLEANUP], 99thPercentileLatency(us), 64031
+
+
+########################################################
+
+CASSANDRA DB WC 200K RUN
+
+2024-04-07 02:08:47:081 247 sec: 200000 operations; 753,82 current ops/sec; [READ: Count=5326, Max=55423, Min=512, Avg=1669,68, 90=1876, 99=8383, 99.9=48159, 99.99=55423] [CLEANUP: Count=2, Max=2275327, Min=15, Avg=1137159,5, 90=2275327, 99=2275327, 99.9=2275327, 99.99=2275327] 
+[OVERALL], RunTime(ms), 247070
+[OVERALL], Throughput(ops/sec), 809.4871898652203
+[TOTAL_GCS_PS_Scavenge], Count, 74
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 555
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.22463269518759868
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 74
+[TOTAL_GC_TIME], Time(ms), 555
+[TOTAL_GC_TIME_%], Time(%), 0.22463269518759868
+[READ], Operations, 200000
+[READ], AverageLatency(us), 2415.059145
+[READ], MinLatency(us), 503
+[READ], MaxLatency(us), 1618943
+[READ], 95thPercentileLatency(us), 5431
+[READ], 99thPercentileLatency(us), 15831
+[READ], Return=OK, 200000
+[CLEANUP], Operations, 2
+[CLEANUP], AverageLatency(us), 1137159.5
+[CLEANUP], MinLatency(us), 15
+[CLEANUP], MaxLatency(us), 2275327
+[CLEANUP], 95thPercentileLatency(us), 2275327
+[CLEANUP], 99thPercentileLatency(us), 2275327
+
