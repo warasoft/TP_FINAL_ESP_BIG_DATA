@@ -21,7 +21,7 @@ RUN
 
 ##CASSANDRA
 ## ATENCION, HAY QUE VER QUE IP TIENE EL CONTENEDOR Y PONERLE LA IP NUEVA EN EL HOST
-./bin/ycsb load cassandra-cql -s -P workloads/workloada -p hosts=172.19.0.3 -p recordcount=2000 -threads 2
+./bin/ycsb run cassandra-cql -s -P workloads/workloada -p hosts=172.19.0.3 -p operationcount=2000 -threads 2
 
 
 
